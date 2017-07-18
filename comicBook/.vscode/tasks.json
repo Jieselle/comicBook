@@ -1,0 +1,20 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "echo",
+    "isShellCommand": true,
+    "args":  // Ask msbuild to generate full paths for file names.
+        "/property:GenerateFullPaths=true",
+    "showOutput": "always",
+    "tasks":[
+        {
+        "taskName": "publish",
+        // Always show errors from builds.
+        "showOutput": "always",
+        "args": [
+            "/p:DeployOnBuild=true",
+            "/p:PublishProfile=Test"
+        ]
+    }
+    
